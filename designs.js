@@ -24,7 +24,7 @@ inputClear.click(function(evt) {
 // ClearTable function
 function clearTable() {
   const td = $('td');
-  if (width > 60 && height > 60){
+  if (width <= 60 && height <= 60){
     td.removeAttr('bgColor', inputColor.val());
   }
 }
