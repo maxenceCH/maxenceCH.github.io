@@ -35,11 +35,13 @@ function makeGrid() {
   // Loop to:
   // Create rows
   for (let row = 0; row < height; row++) {
-    table.append('<tr></tr>');
+    if(width<=60 && height<=60){
+      table.append('<tr></tr>');
 
-    //Create columns
-    for (let col = 0; col < width; col++) {
-      table.children().last().append('<td></td>');
+      //Create columns
+      for (let col = 0; col < width; col++) {
+        table.children().last().append('<td></td>');
+      }
     }
   }
 }
