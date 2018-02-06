@@ -57,4 +57,5 @@ table.on('dblclick', 'td', function() {
   $(this).removeAttr('bgColor', inputColor.val());
 });
 
+// Calling makeGrid function when loading page in order to have the grid with default values appearing
 makeGrid();
