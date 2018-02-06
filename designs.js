@@ -24,7 +24,9 @@ inputClear.click(function(evt) {
 // ClearTable function
 function clearTable() {
   const td = $('td');
-  td.removeAttr('bgColor', inputColor.val());
+  if (width > 60 && height > 60){
+    td.removeAttr('bgColor', inputColor.val());
+  }
 }
 
 // Make grid function
@@ -35,7 +37,8 @@ function makeGrid() {
   // Loop to:
   // Create rows
   for (let row = 0; row < height; row++) {
-    if(width<=60 && height<=60){
+    // Check if height and width values are under the max assigned value of 60
+    if(width <= 60 && height <= 60){
       table.append('<tr></tr>');
 
       //Create columns
